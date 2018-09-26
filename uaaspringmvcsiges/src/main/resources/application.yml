@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  profiles.active: uaa
+  mvc:
+    throw-exception-if-no-handler-found: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+spring.mvc.view.prefix: /
+spring.jpa.database: default
+spring.mvc.view.suffix: .jsp
+spring.jpa.show-sql: true
+---
+
+siges:
+  profiles: uaa
+  jpa:
+    database: POSTGRESQL
+    format_sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/siges
+    username: postgres
+    password: 4061950
+    driverClassName: org.postgresql.Driver
+    
